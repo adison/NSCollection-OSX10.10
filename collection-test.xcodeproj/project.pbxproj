@@ -14,6 +14,8 @@
 		B389C4A11D58181D00AC382B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B389C49F1D58181D00AC382B /* Main.storyboard */; };
 		B389C4AC1D58181D00AC382B /* collection_testTests.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4AB1D58181D00AC382B /* collection_testTests.m */; };
 		B389C4B71D58181E00AC382B /* collection_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4B61D58181E00AC382B /* collection_testUITests.m */; };
+		B389C4C71D581B5F00AC382B /* CollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4C51D581B5F00AC382B /* CollectionItem.m */; };
+		B389C4C81D581B5F00AC382B /* CollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C4C61D581B5F00AC382B /* CollectionItem.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +51,9 @@
 		B389C4B21D58181E00AC382B /* collection-testUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "collection-testUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B389C4B61D58181E00AC382B /* collection_testUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = collection_testUITests.m; sourceTree = "<group>"; };
 		B389C4B81D58181E00AC382B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B389C4C41D581B5F00AC382B /* CollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionItem.h; sourceTree = "<group>"; };
+		B389C4C51D581B5F00AC382B /* CollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionItem.m; sourceTree = "<group>"; };
+		B389C4C61D581B5F00AC382B /* CollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItem.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -107,6 +112,9 @@
 				B389C49F1D58181D00AC382B /* Main.storyboard */,
 				B389C4A21D58181D00AC382B /* Info.plist */,
 				B389C4971D58181D00AC382B /* Supporting Files */,
+				B389C4C41D581B5F00AC382B /* CollectionItem.h */,
+				B389C4C51D581B5F00AC382B /* CollectionItem.m */,
+				B389C4C61D581B5F00AC382B /* CollectionItem.xib */,
 			);
 			path = "collection-test";
 			sourceTree = "<group>";
@@ -242,6 +250,7 @@
 			files = (
 				B389C49E1D58181D00AC382B /* Assets.xcassets in Resources */,
 				B389C4A11D58181D00AC382B /* Main.storyboard in Resources */,
+				B389C4C81D581B5F00AC382B /* CollectionItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +277,7 @@
 			files = (
 				B389C49C1D58181D00AC382B /* ViewController.m in Sources */,
 				B389C4991D58181D00AC382B /* main.m in Sources */,
+				B389C4C71D581B5F00AC382B /* CollectionItem.m in Sources */,
 				B389C4961D58181D00AC382B /* AppDelegate.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
