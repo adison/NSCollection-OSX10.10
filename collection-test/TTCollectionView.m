@@ -7,18 +7,22 @@
 //
 
 #import "TTCollectionView.h"
+#import "CollectionItem.h"
 
 @implementation TTCollectionView
 
 - (void)drawRect:(NSRect)dirtyRect {
     [super drawRect:dirtyRect];
-    
-    // Drawing code here.
 }
 
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
-    id a = self.content[3];
-    return [super newItemForRepresentedObject:a];
+    CollectionItem* d = [[self itemPrototype] copy];
     
+    id a = self.content[3];
+    
+     [d setRepresentedObject:a];
+    return d;
 }
+
+
 @end

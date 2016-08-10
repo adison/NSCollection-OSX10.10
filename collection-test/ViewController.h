@@ -8,7 +8,8 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface ViewController : NSViewController 
+@interface ViewController : NSViewController <NSCollectionViewDelegate>
 
 
+@property (nonatomic) NSArray* list;
 @end

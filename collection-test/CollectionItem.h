@@ -11,5 +11,5 @@
 @interface CollectionItem : NSCollectionViewItem
 @property (nonatomic) IBOutlet NSTextField *header;
 @property (nonatomic) IBOutlet NSTextField *desc;
-@property (nonnull) NSArray* kk;
+//@property (nonatomic) NSArray* kk;
 @end

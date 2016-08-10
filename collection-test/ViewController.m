@@ -8,22 +8,19 @@
 
 #import "ViewController.h"
 #import "CollectionItem.h"
+#import "TTCollectionView.h"
 
 @interface ViewController() {
     
-    NSArray* list;
     CollectionItem* collectItem;
     NSArrayController* listController;
 }
-@property (weak) IBOutlet NSCollectionView *collectView;
+@property (weak) IBOutlet TTCollectionView *collectView;
 //@property (strong) CollectionItem* collectItem;
 @end
 
 @implementation ViewController
-
-
-#pragma mark - collection view data source - required
-
+@synthesize list;
 
 //- (NSCollectionViewItem *)collectionView:(NSCollectionView *)aCollectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)aIndexPath {
 //    [aCollectionView deq]
@@ -43,7 +40,6 @@
 //    return item;
 //}
 
-
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.view.wantsLayer = YES;
@@ -59,17 +55,17 @@
 
     }
     list = ll;
-    
-    
-    
     collectItem = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
-    collectItem.kk = ll;
+    
+//    collectItem.header.stringValue = @"hh";
+
+//    collectItem.kk = ll;
 //    collectItem = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
 //    [_collectView setItemPrototype:[self.storyboard instantiateControllerWithIdentifier:@"tt"]];
-    [_collectView setItemPrototype:collectItem];
-    
-    [_collectView setContent:listController.arrangedObjects];
+    [_collectView setItemPrototype:[[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]]];
 
+    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"list" options:NULL];
+    [_collectView setContent:listController.arrangedObjects];
     
 }
 

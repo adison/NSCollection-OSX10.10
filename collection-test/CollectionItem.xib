@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <objects>
@@ -9,6 +8,7 @@
             <connections>
                 <outlet property="desc" destination="2rW-Oq-66o" id="IbP-G3-jrb"/>
                 <outlet property="header" destination="Tcf-Hw-yz3" id="dS9-dW-PwB"/>
+                <outlet property="textField" destination="Tcf-Hw-yz3" id="Q7d-Qh-ekY"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -23,7 +23,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="UW9-jq-D2k"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="doG-Wy-Rnk">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Labelasdd" id="doG-Wy-Rnk">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -34,7 +34,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="qxA-JK-Ece"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Label" id="Uxe-Ae-0Qf">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="asdfafafda" id="Uxe-Ae-0Qf">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
@@ -49,7 +49,7 @@
                 <constraint firstItem="Tcf-Hw-yz3" firstAttribute="top" secondItem="Hz6-mo-xeY" secondAttribute="top" constant="20" id="WcJ-Ie-sDJ"/>
                 <constraint firstItem="Tcf-Hw-yz3" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="26" id="ueI-Q0-kfz"/>
             </constraints>
-            <point key="canvasLocation" x="706" y="452"/>
+            <point key="canvasLocation" x="363" y="384"/>
         </customView>
     </objects>
 </document>
