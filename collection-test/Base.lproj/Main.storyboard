@@ -672,30 +672,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
-                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDS-tr-f0m">
-                                <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
-                                <clipView key="contentView" id="sHT-yn-M0I">
-                                    <rect key="frame" x="1" y="1" width="358" height="248"/>
-                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                    <subviews>
-                                        <collectionView id="aKC-y7-Ff9" customClass="TTCollectionView">
-                                            <rect key="frame" x="0.0" y="0.0" width="358" height="248"/>
-                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                            <color key="secondaryBackgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                        </collectionView>
-                                    </subviews>
-                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                </clipView>
-                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="rUm-zT-Ynk">
-                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Xlk-fd-NRU">
-                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </scroller>
-                            </scrollView>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P2u-28-ztN">
                                 <rect key="frame" x="372" y="205" width="81" height="32"/>
                                 <constraints>
@@ -718,6 +694,30 @@
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
                             </button>
+                            <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDS-tr-f0m">
+                                <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
+                                <clipView key="contentView" id="sHT-yn-M0I">
+                                    <rect key="frame" x="1" y="1" width="358" height="248"/>
+                                    <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                    <subviews>
+                                        <collectionView maxNumberOfColumns="6" id="aKC-y7-Ff9" customClass="TTCollectionView">
+                                            <rect key="frame" x="0.0" y="0.0" width="358" height="248"/>
+                                            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                                            <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                            <color key="secondaryBackgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        </collectionView>
+                                    </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
+                                </clipView>
+                                <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="rUm-zT-Ynk">
+                                    <rect key="frame" x="1" y="144" width="233" height="15"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                                <scroller key="verticalScroller" hidden="YES" verticalHuggingPriority="750" doubleValue="1" horizontal="NO" id="Xlk-fd-NRU">
+                                    <rect key="frame" x="234" y="1" width="15" height="143"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </scroller>
+                            </scrollView>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DDS-tr-f0m" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="0b3-sX-ell"/>

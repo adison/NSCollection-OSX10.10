@@ -29,7 +29,7 @@
     NSMutableArray* ll = [NSMutableArray new];
     listController = [NSArrayController new];
     
-    for (NSInteger i= 0, ii= 3; i< ii; i++) {
+    for (NSInteger i= 0, ii= 30; i< ii; i++) {
         [listController addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
                         @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
         [ll addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
