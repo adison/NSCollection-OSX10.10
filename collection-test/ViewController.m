@@ -12,33 +12,15 @@
 
 @interface ViewController() {
     
-    CollectionItem* collectItem;
     NSArrayController* listController;
 }
 @property (weak) IBOutlet TTCollectionView *collectView;
-//@property (strong) CollectionItem* collectItem;
+@property (nonatomic) NSArray* list;
 @end
 
 @implementation ViewController
 @synthesize list;
 
-//- (NSCollectionViewItem *)collectionView:(NSCollectionView *)aCollectionView itemForRepresentedObjectAtIndexPath:(NSIndexPath *)aIndexPath {
-//    [aCollectionView deq]
-//    
-//    CollectionItem* item = [aCollectionView makeItemWithIdentifier:@"test" forIndexPath:aIndexPath];
-//    
-//    if (item == nil) {
-//        item = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
-////        item.view.layer.backgroundColor = [NSColor redColor];
-//    }
-//    
-//    
-////    item.header.stringValue = [(NSDictionary*)list[aIndexPath.section * 24 + aIndexPath.item] objectForKey:@"header"];
-////    item.desc.stringValue = [(NSDictionary*)list[aIndexPath.section * 24 + aIndexPath.item] objectForKey:@"desc"];
-//    
-//    
-//    return item;
-//}
 
 - (void)viewDidLoad {
     [super viewDidLoad];
@@ -47,7 +29,7 @@
     NSMutableArray* ll = [NSMutableArray new];
     listController = [NSArrayController new];
     
-    for (NSInteger i= 0, ii= 100; i< ii; i++) {
+    for (NSInteger i= 0, ii= 3; i< ii; i++) {
         [listController addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
                         @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
         [ll addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
@@ -55,24 +37,17 @@
 
     }
     list = ll;
-    collectItem = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     
-//    collectItem.header.stringValue = @"hh";
-
-//    collectItem.kk = ll;
-//    collectItem = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
-//    [_collectView setItemPrototype:[self.storyboard instantiateControllerWithIdentifier:@"tt"]];
-    [_collectView setItemPrototype:[[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]]];
-
-    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"list" options:NULL];
+    [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
     [_collectView setContent:listController.arrangedObjects];
+    
+    [_collectView setItemPrototype:[[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]]];
+//    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"list" options:NULL];
     
 }
 
 - (void)setRepresentedObject:(id)representedObject {
     [super setRepresentedObject:representedObject];
-
-    NSLog(@"represented?");
 }
 
 @end

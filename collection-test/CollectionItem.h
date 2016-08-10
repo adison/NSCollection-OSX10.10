@@ -8,7 +8,7 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface CollectionItem : NSCollectionViewItem
+@interface CollectionItem : NSCollectionViewItem <NSCopying>
 @property (nonatomic) IBOutlet NSTextField *header;
 @property (nonatomic) IBOutlet NSTextField *desc;
 //@property (nonatomic) NSArray* kk;

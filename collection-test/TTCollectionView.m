@@ -18,9 +18,7 @@
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
     CollectionItem* d = [[self itemPrototype] copy];
     
-    id a = self.content[3];
-    
-     [d setRepresentedObject:a];
+     [d setRepresentedObject:object];
     return d;
 }
 

@@ -16,33 +16,29 @@
 @implementation CollectionItem
 @synthesize header, desc;
 
+-(void)viewWillAppear {
+    [self setRepresentedObject:self.representedObject];
+    [super viewWillAppear];
+    
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
-    NSLog(@"viewDidLoad");
-    header.stringValue = @"33";
-    desc.stringValue = @"2342";
-
 }
 
 -(void)setRepresentedObject:(id)representedObject{
     [super setRepresentedObject:representedObject];
-    if (representedObject ==nil)
-    {
+    if (representedObject ==nil) {
         representedObject = @{@"header": @"hh",
                               @"desc" : @"desc"};
-        
     }
-    header.stringValue = @"33";
-    desc.stringValue = @"2342";
-//    NSLog(@"%@", self);
     header.stringValue = [representedObject valueForKey:@"header"];
     desc.stringValue = [representedObject valueForKey:@"desc"];
-
 }
 
--(void)awakeFromNib {
-    [super awakeFromNib];
-    NSLog(@"awakeFromNib");
+-(id)copy {
+    id copy = [[CollectionItem alloc]initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    
+    return copy;
 }
-
 @end
