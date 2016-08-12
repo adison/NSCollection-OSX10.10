@@ -42,8 +42,6 @@
     [_collectView setContent:listController.arrangedObjects];
     
     [_collectView setItemPrototype:[[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]]];
-//    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"list" options:NULL];
-    
 }
 
 - (void)setRepresentedObject:(id)representedObject {
