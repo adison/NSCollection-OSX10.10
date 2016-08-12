@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="10117" systemVersion="15G31" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" initialViewController="B8D-0N-5wS">
     <dependencies>
-        <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="10117"/>
     </dependencies>
     <scenes>
@@ -673,23 +672,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="P2u-28-ztN">
+                                <rect key="frame" x="372" y="205" width="81" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="69" id="HYI-Mz-M7W"/>
+                                    <constraint firstAttribute="height" constant="21" id="k0G-ko-82X"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kMF-y5-ZAf">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
+                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-2V-BHy">
+                                <rect key="frame" x="372" y="159" width="81" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="21" id="DrQ-r6-gAG"/>
+                                    <constraint firstAttribute="width" constant="69" id="y0H-0q-xQT"/>
+                                </constraints>
+                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igJ-vT-5Kv">
+                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
+                                    <font key="font" metaFont="system"/>
+                                </buttonCell>
+                            </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDS-tr-f0m">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
                                 <clipView key="contentView" id="sHT-yn-M0I">
                                     <rect key="frame" x="1" y="1" width="358" height="248"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="aKC-y7-Ff9">
+                                        <collectionView maxNumberOfColumns="6" id="aKC-y7-Ff9" customClass="TTCollectionView">
                                             <rect key="frame" x="0.0" y="0.0" width="358" height="248"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                                            <collectionViewGridLayout key="collectionViewLayout" id="t6i-8W-MFd"/>
                                             <color key="primaryBackgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             <color key="secondaryBackgroundColor" red="0.0" green="0.50196081400000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                            <connections>
-                                                <outlet property="dataSource" destination="XfG-lQ-9wD" id="I0m-AA-Lv0"/>
-                                            </connections>
                                         </collectionView>
                                     </subviews>
+                                    <color key="backgroundColor" name="controlBackgroundColor" catalog="System" colorSpace="catalog"/>
                                 </clipView>
                                 <scroller key="horizontalScroller" hidden="YES" verticalHuggingPriority="750" horizontal="YES" id="rUm-zT-Ynk">
                                     <rect key="frame" x="1" y="144" width="233" height="15"/>
@@ -700,25 +718,15 @@
                                     <autoresizingMask key="autoresizingMask"/>
                                 </scroller>
                             </scrollView>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="P2u-28-ztN">
-                                <rect key="frame" x="372" y="205" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="kMF-y5-ZAf">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
-                            <button verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-2V-BHy">
-                                <rect key="frame" x="372" y="159" width="81" height="32"/>
-                                <buttonCell key="cell" type="push" title="Button" bezelStyle="rounded" alignment="center" borderStyle="border" imageScaling="proportionallyDown" inset="2" id="igJ-vT-5Kv">
-                                    <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
-                                    <font key="font" metaFont="system"/>
-                                </buttonCell>
-                            </button>
                         </subviews>
                         <constraints>
                             <constraint firstItem="DDS-tr-f0m" firstAttribute="leading" secondItem="m2S-Jp-Qdl" secondAttribute="leading" id="0b3-sX-ell"/>
+                            <constraint firstAttribute="trailing" secondItem="QeO-2V-BHy" secondAttribute="trailing" constant="33" id="K9B-3P-PNp"/>
                             <constraint firstAttribute="bottom" secondItem="DDS-tr-f0m" secondAttribute="bottom" id="LwS-9T-WaN"/>
+                            <constraint firstItem="P2u-28-ztN" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="37" id="buj-4z-e23"/>
                             <constraint firstItem="DDS-tr-f0m" firstAttribute="top" secondItem="m2S-Jp-Qdl" secondAttribute="top" constant="20" id="fAI-DI-mET"/>
+                            <constraint firstItem="QeO-2V-BHy" firstAttribute="top" secondItem="P2u-28-ztN" secondAttribute="bottom" constant="25" id="fmP-Yn-Voo"/>
+                            <constraint firstAttribute="trailing" secondItem="P2u-28-ztN" secondAttribute="trailing" constant="33" id="hu2-bd-jmX"/>
                             <constraint firstAttribute="trailing" secondItem="DDS-tr-f0m" secondAttribute="trailing" constant="120" id="oL5-dy-nGW"/>
                         </constraints>
                     </view>

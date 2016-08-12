@@ -16,6 +16,7 @@
 		B389C4B71D58181E00AC382B /* collection_testUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4B61D58181E00AC382B /* collection_testUITests.m */; };
 		B389C4C71D581B5F00AC382B /* CollectionItem.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4C51D581B5F00AC382B /* CollectionItem.m */; };
 		B389C4C81D581B5F00AC382B /* CollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B389C4C61D581B5F00AC382B /* CollectionItem.xib */; };
+		B398BEEF1D5B12E200953060 /* TTCollectionView.m in Sources */ = {isa = PBXBuildFile; fileRef = B398BEEE1D5B12E200953060 /* TTCollectionView.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +55,8 @@
 		B389C4C41D581B5F00AC382B /* CollectionItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CollectionItem.h; sourceTree = "<group>"; };
 		B389C4C51D581B5F00AC382B /* CollectionItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CollectionItem.m; sourceTree = "<group>"; };
 		B389C4C61D581B5F00AC382B /* CollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CollectionItem.xib; sourceTree = "<group>"; };
+		B398BEED1D5B12E200953060 /* TTCollectionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TTCollectionView.h; sourceTree = "<group>"; };
+		B398BEEE1D5B12E200953060 /* TTCollectionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TTCollectionView.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +118,8 @@
 				B389C4C41D581B5F00AC382B /* CollectionItem.h */,
 				B389C4C51D581B5F00AC382B /* CollectionItem.m */,
 				B389C4C61D581B5F00AC382B /* CollectionItem.xib */,
+				B398BEED1D5B12E200953060 /* TTCollectionView.h */,
+				B398BEEE1D5B12E200953060 /* TTCollectionView.m */,
 			);
 			path = "collection-test";
 			sourceTree = "<group>";
@@ -277,6 +282,7 @@
 			files = (
 				B389C49C1D58181D00AC382B /* ViewController.m in Sources */,
 				B389C4991D58181D00AC382B /* main.m in Sources */,
+				B398BEEF1D5B12E200953060 /* TTCollectionView.m in Sources */,
 				B389C4C71D581B5F00AC382B /* CollectionItem.m in Sources */,
 				B389C4961D58181D00AC382B /* AppDelegate.m in Sources */,
 			);
@@ -362,7 +368,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = macosx;
@@ -400,7 +406,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				MACOSX_DEPLOYMENT_TARGET = 10.11;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = macosx;
 			};
@@ -499,6 +505,7 @@
 				B389C4BD1D58181E00AC382B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B389C4BE1D58181E00AC382B /* Build configuration list for PBXNativeTarget "collection-testTests" */ = {
 			isa = XCConfigurationList;
@@ -507,6 +514,7 @@
 				B389C4C01D58181E00AC382B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B389C4C11D58181E00AC382B /* Build configuration list for PBXNativeTarget "collection-testUITests" */ = {
 			isa = XCConfigurationList;
@@ -515,6 +523,7 @@
 				B389C4C31D58181E00AC382B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

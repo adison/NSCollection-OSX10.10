@@ -7,6 +7,7 @@
 //
 
 #import "CollectionItem.h"
+#import <QuartzCore/QuartzCore.h>
 
 @interface CollectionItem ()
 
@@ -15,22 +16,26 @@
 @implementation CollectionItem
 @synthesize header, desc;
 
-- (void)viewDidLoad {
-    [super viewDidLoad];
-    self.view.wantsLayer = YES;
+-(void)viewWillAppear {
+    [self setRepresentedObject:self.representedObject];
+    [super viewWillAppear];
     
-//    self.view.layer.backgroundColor = [NSColor blueColor];
-    // Do view setup here.
 }
+
 
 -(void)setRepresentedObject:(id)representedObject{
     [super setRepresentedObject:representedObject];
-    if (representedObject !=nil)
-    {
-        header.stringValue = [representedObject valueForKey:@"header"];
-        desc.stringValue = [representedObject valueForKey:@"desc"];
-        
+    if (representedObject ==nil) {
+        representedObject = @{@"header": @"hh",
+                              @"desc" : @"desc"};
     }
+    header.stringValue = [representedObject valueForKey:@"header"];
+    desc.stringValue = [representedObject valueForKey:@"desc"];
+}
 
+-(id)copy {
+    id copy = [[CollectionItem alloc]initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    
+    return copy;
 }
 @end
