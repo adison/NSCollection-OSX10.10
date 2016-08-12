@@ -11,14 +11,10 @@
 
 @implementation TTCollectionView
 
-- (void)drawRect:(NSRect)dirtyRect {
-    [super drawRect:dirtyRect];
-}
-
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
     CollectionItem* d = [[self itemPrototype] copy];
+    [d setRepresentedObject:object];
     
-     [d setRepresentedObject:object];
     return d;
 }
 
