@@ -27,6 +27,12 @@
     itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = false;
     [_collectView setItemPrototype:itemPrototype];
+    
+//    CGFloat width = [[_collectView enclosingScrollView] bounds].size.width;
+    CGSize itemSize = NSMakeSize(200, 100);
+    [_collectView setMaxItemSize:itemSize];
+    [_collectView setMinItemSize:itemSize];
+
     [_collectView reloadData];
     
 }
@@ -35,6 +41,12 @@
     itemPrototype = [[CollectionItem alloc] initWithNibName:@"StraightCollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = true;
     [_collectView setItemPrototype:itemPrototype];
+    
+//    CGFloat width = [[_collectView enclosingScrollView] bounds].size.width;
+    CGSize itemSize = NSMakeSize(300, 100);
+    [_collectView setMaxItemSize:itemSize];
+    [_collectView setMinItemSize:itemSize];
+
     [_collectView reloadData];
 }
 
@@ -57,6 +69,12 @@
     [_collectView setContent:listController.arrangedObjects];
     itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = true;
+    
+    
+    CGFloat width = [[_collectView enclosingScrollView] bounds].size.width;
+    CGSize itemSize = NSMakeSize(width, 100);
+    [_collectView setMaxItemSize:itemSize];
+    [_collectView setMinItemSize:itemSize];
     
     [_collectView setItemPrototype:itemPrototype];
 }
