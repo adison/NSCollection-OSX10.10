@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B33A5D311D615845005617BE /* StraightCollectionItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = B33A5D2F1D615845005617BE /* StraightCollectionItem.xib */; };
 		B389C4961D58181D00AC382B /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4951D58181D00AC382B /* AppDelegate.m */; };
 		B389C4991D58181D00AC382B /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C4981D58181D00AC382B /* main.m */; };
 		B389C49C1D58181D00AC382B /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B389C49B1D58181D00AC382B /* ViewController.m */; };
@@ -37,6 +38,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		B33A5D2F1D615845005617BE /* StraightCollectionItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = StraightCollectionItem.xib; sourceTree = "<group>"; };
 		B389C4911D58181D00AC382B /* collection-test.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "collection-test.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B389C4941D58181D00AC382B /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		B389C4951D58181D00AC382B /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -112,12 +114,13 @@
 				B389C49A1D58181D00AC382B /* ViewController.h */,
 				B389C49B1D58181D00AC382B /* ViewController.m */,
 				B389C49D1D58181D00AC382B /* Assets.xcassets */,
-				B389C49F1D58181D00AC382B /* Main.storyboard */,
 				B389C4A21D58181D00AC382B /* Info.plist */,
+				B389C49F1D58181D00AC382B /* Main.storyboard */,
 				B389C4971D58181D00AC382B /* Supporting Files */,
 				B389C4C41D581B5F00AC382B /* CollectionItem.h */,
 				B389C4C51D581B5F00AC382B /* CollectionItem.m */,
 				B389C4C61D581B5F00AC382B /* CollectionItem.xib */,
+				B33A5D2F1D615845005617BE /* StraightCollectionItem.xib */,
 				B398BEED1D5B12E200953060 /* TTCollectionView.h */,
 				B398BEEE1D5B12E200953060 /* TTCollectionView.m */,
 			);
@@ -253,6 +256,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B33A5D311D615845005617BE /* StraightCollectionItem.xib in Resources */,
 				B389C49E1D58181D00AC382B /* Assets.xcassets in Resources */,
 				B389C4A11D58181D00AC382B /* Main.storyboard in Resources */,
 				B389C4C81D581B5F00AC382B /* CollectionItem.xib in Resources */,

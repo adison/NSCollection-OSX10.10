@@ -23,7 +23,7 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="UW9-jq-D2k"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="Labelasdd" id="doG-Wy-Rnk">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" title="Labelasdd" id="doG-Wy-Rnk">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
@@ -34,12 +34,19 @@
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="qxA-JK-Ece"/>
                     </constraints>
-                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" alignment="center" title="asdfafafda" id="Uxe-Ae-0Qf">
+                    <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" enabled="NO" sendsActionOnEndEditing="YES" alignment="center" title="asdfafafda" id="Uxe-Ae-0Qf">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
                         <color key="backgroundColor" name="alternateSelectedControlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
+                <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Zw6-8P-snT">
+                    <rect key="frame" x="18" y="89" width="61" height="18"/>
+                    <buttonCell key="cell" type="check" title="Check" bezelStyle="regularSquare" imagePosition="left" state="on" inset="2" id="SrL-lt-PjH">
+                        <behavior key="behavior" changeContents="YES" doesNotDimImage="YES" lightByContents="YES"/>
+                        <font key="font" metaFont="system"/>
+                    </buttonCell>
+                </button>
             </subviews>
             <constraints>
                 <constraint firstItem="2rW-Oq-66o" firstAttribute="leading" secondItem="Hz6-mo-xeY" secondAttribute="leading" constant="26" id="4mr-vh-rgB"/>

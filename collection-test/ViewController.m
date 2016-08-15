@@ -39,7 +39,10 @@
     
     [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
     [_collectView setContent:listController.arrangedObjects];
-    [_collectView setItemPrototype:[[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]]];
+    CollectionItem *itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    itemPrototype.straightStyle = true;
+    
+    [_collectView setItemPrototype:itemPrototype];
 }
 
 - (void)setRepresentedObject:(id)representedObject {

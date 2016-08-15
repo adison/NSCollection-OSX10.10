@@ -14,12 +14,20 @@
 @end
 
 @implementation CollectionItem
-@synthesize header, desc;
+@synthesize header, desc, straightStyle;
+
+- (instancetype)init
+{
+    self = [super init];
+    if (self) {
+        straightStyle = false;
+    }
+    return self;
+}
 
 -(void)viewWillAppear {
     [self setRepresentedObject:self.representedObject];
     [super viewWillAppear];
-    
 }
 
 
@@ -34,8 +42,13 @@
 }
 
 -(id)copy {
+    if (straightStyle) {
+        id copy = [[CollectionItem alloc]initWithNibName:@"StraightCollectionItem" bundle:[NSBundle mainBundle]];
+        return copy;
+    }
     id copy = [[CollectionItem alloc]initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     
     return copy;
+
 }
 @end
