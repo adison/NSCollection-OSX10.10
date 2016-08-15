@@ -26,7 +26,7 @@
                     </textFieldCell>
                 </textField>
                 <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="qlN-qB-tHE">
-                    <rect key="frame" x="253" y="36" width="37" height="17"/>
+                    <rect key="frame" x="188" y="36" width="114" height="17"/>
                     <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Label" id="hHY-Vs-IXF">
                         <font key="font" metaFont="system"/>
                         <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -34,7 +34,7 @@
                     </textFieldCell>
                 </textField>
             </subviews>
-            <point key="canvasLocation" x="213.5" y="245.5"/>
+            <point key="canvasLocation" x="213" y="245.5"/>
         </customView>
     </objects>
 </document>
