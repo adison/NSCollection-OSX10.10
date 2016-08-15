@@ -6,9 +6,9 @@
     <objects>
         <customObject id="-2" userLabel="File's Owner" customClass="CollectionItem">
             <connections>
+                <outlet property="checkBox" destination="Zw6-8P-snT" id="RfD-F4-hJ9"/>
                 <outlet property="desc" destination="2rW-Oq-66o" id="IbP-G3-jrb"/>
                 <outlet property="header" destination="Tcf-Hw-yz3" id="dS9-dW-PwB"/>
-                <outlet property="textField" destination="Tcf-Hw-yz3" id="Q7d-Qh-ekY"/>
                 <outlet property="view" destination="Hz6-mo-xeY" id="0bl-1N-x8E"/>
             </connections>
         </customObject>
@@ -18,8 +18,8 @@
             <rect key="frame" x="0.0" y="0.0" width="300" height="128"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
             <subviews>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-Oq-66o">
-                    <rect key="frame" x="24" y="59" width="274" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="2rW-Oq-66o">
+                    <rect key="frame" x="24" y="59" width="278" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="UW9-jq-D2k"/>
                     </constraints>
@@ -29,8 +29,8 @@
                         <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                     </textFieldCell>
                 </textField>
-                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-Hw-yz3">
-                    <rect key="frame" x="24" y="91" width="274" height="17"/>
+                <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Tcf-Hw-yz3">
+                    <rect key="frame" x="24" y="91" width="278" height="17"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="17" id="qxA-JK-Ece"/>
                     </constraints>
