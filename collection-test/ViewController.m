@@ -15,6 +15,8 @@
     NSArrayController* listController;
     
     CollectionItem* itemPrototype;
+    
+    NSLayoutConstraint* snHeight;
 }
 @property (weak) IBOutlet TTCollectionView *collectView;
 @property (nonatomic) NSArray* list;
@@ -24,6 +26,8 @@
 @synthesize list;
 
 - (IBAction)row1:(id)sender {
+    snHeight.constant = 300.f;
+    [_collectView updateConstraints];
     itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = false;
     [_collectView setItemPrototype:itemPrototype];
@@ -32,12 +36,13 @@
     CGSize itemSize = NSMakeSize(200, 100);
     [_collectView setMaxItemSize:itemSize];
     [_collectView setMinItemSize:itemSize];
-
     [_collectView reloadData];
-    
 }
 
 - (IBAction)row2:(id)sender {
+    snHeight.constant = 200.f;
+    
+    [_collectView updateConstraints];
     itemPrototype = [[CollectionItem alloc] initWithNibName:@"StraightCollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = true;
     [_collectView setItemPrototype:itemPrototype];
@@ -48,6 +53,17 @@
     [_collectView setMinItemSize:itemSize];
 
     [_collectView reloadData];
+}
+
+
+-(void)viewWillAppear {
+    [super viewWillAppear];
+    
+    for (NSLayoutConstraint *con in [[[_collectView superview] superview] constraints]) {
+        if ([[con identifier] isEqualToString:@"snHeight"]) {
+            snHeight = con;
+        }
+    }
 }
 
 - (void)viewDidLoad {
