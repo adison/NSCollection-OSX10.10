@@ -13,6 +13,8 @@
 @interface ViewController() {
     
     NSArrayController* listController;
+    
+    CollectionItem* itemPrototype;
 }
 @property (weak) IBOutlet TTCollectionView *collectView;
 @property (nonatomic) NSArray* list;
@@ -20,6 +22,21 @@
 
 @implementation ViewController
 @synthesize list;
+
+- (IBAction)row1:(id)sender {
+    itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    itemPrototype.straightStyle = false;
+    [_collectView setItemPrototype:itemPrototype];
+    [_collectView reloadData];
+    
+}
+
+- (IBAction)row2:(id)sender {
+    itemPrototype = [[CollectionItem alloc] initWithNibName:@"StraightCollectionItem" bundle:[NSBundle mainBundle]];
+    itemPrototype.straightStyle = true;
+    [_collectView setItemPrototype:itemPrototype];
+    [_collectView reloadData];
+}
 
 - (void)viewDidLoad {
     NSMutableArray* ll = [NSMutableArray new];
@@ -30,7 +47,6 @@
                                     @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
         [ll addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
                         @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
-        
     }
     list = ll;
 
@@ -39,7 +55,7 @@
     
     [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
     [_collectView setContent:listController.arrangedObjects];
-    CollectionItem *itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     itemPrototype.straightStyle = true;
     
     [_collectView setItemPrototype:itemPrototype];

@@ -16,11 +16,9 @@
 @implementation CollectionItem
 @synthesize header, desc, straightStyle;
 
-- (instancetype)init
-{
+- (instancetype)init {
     self = [super init];
     if (self) {
-        straightStyle = false;
     }
     return self;
 }
@@ -49,6 +47,5 @@
     id copy = [[CollectionItem alloc]initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
     
     return copy;
-
 }
 @end

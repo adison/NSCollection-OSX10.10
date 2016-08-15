@@ -682,6 +682,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="row1:" target="XfG-lQ-9wD" id="LcG-wu-i63"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="QeO-2V-BHy">
                                 <rect key="frame" x="372" y="159" width="81" height="32"/>
@@ -693,6 +696,9 @@
                                     <behavior key="behavior" pushIn="YES" lightByBackground="YES" lightByGray="YES"/>
                                     <font key="font" metaFont="system"/>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="row2:" target="XfG-lQ-9wD" id="zQB-tz-mFM"/>
+                                </connections>
                             </button>
                             <scrollView autohidesScrollers="YES" horizontalLineScroll="10" horizontalPageScroll="10" verticalLineScroll="10" verticalPageScroll="10" usesPredominantAxisScrolling="NO" translatesAutoresizingMaskIntoConstraints="NO" id="DDS-tr-f0m">
                                 <rect key="frame" x="0.0" y="0.0" width="360" height="250"/>
