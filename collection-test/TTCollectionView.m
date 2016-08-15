@@ -12,11 +12,10 @@
 @implementation TTCollectionView
 
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
-    CollectionItem* d = [[self itemPrototype] copy];
-    [d setRepresentedObject:object];
+    id newItem = [[self itemPrototype] copy];
+    [newItem setRepresentedObject:object];
     
-    return d;
+    return newItem;
 }
-
 
 @end
