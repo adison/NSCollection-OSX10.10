@@ -88,13 +88,14 @@
     
     [_collectView setItemPrototype:itemPrototype];
 
+    // strat collection view
+    [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
+
     // start KVC
-    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"self.listController.arrangedObjects" options:NULL];
+//    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"self.listController.arrangedObjects" options:NULL];
 
     [listController addObserver:_collectView forKeyPath:@"arrangedObjects" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:"1"];
     
-    // strat collection view
-    [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
     
 }
 
