@@ -24,8 +24,8 @@
 }
 
 -(void)viewWillAppear {
-    [self setRepresentedObject:self.representedObject];
     [super viewWillAppear];
+    [self setRepresentedObject:self.representedObject];
 }
 
 

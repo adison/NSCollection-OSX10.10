@@ -12,11 +12,11 @@
 @implementation TTCollectionView
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
- 
     if ([object isKindOfClass:[NSArrayController class]]) {
         self.content = [(NSArrayController*)object arrangedObjects];
     }
     else {
+        [super observeValueForKeyPath:keyPath ofObject:object change:change context:context];
         NSLog(@"keyPath = %@, change = %@, context = %s", keyPath, change, (char *)context);
     }
     NSLog(@">>>>>>>>>>>>>>>> relaod");
