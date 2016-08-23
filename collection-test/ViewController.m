@@ -25,7 +25,7 @@
 - (IBAction)row1:(id)sender {
 
     // change content
-    NSArray* a= [listController.arrangedObjects copy];
+//    NSArray* a= [listController.arrangedObjects copy];
 
 //    for (NSUInteger i= a.count, ii = 0; i > ii; i--) {
 //        [listController removeObjectAtArrangedObjectIndex:i-1];
