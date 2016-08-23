@@ -27,16 +27,18 @@
     // change content
     NSArray* a= [listController.arrangedObjects copy];
 
-    for (NSUInteger i= a.count, ii = 0; i > ii; i--) {
-        [listController removeObjectAtArrangedObjectIndex:i-1];
-    }
+//    for (NSUInteger i= a.count, ii = 0; i > ii; i--) {
+//        [listController removeObjectAtArrangedObjectIndex:i-1];
+//    }
 
-    for (NSUInteger i= 0, ii= a.count; i< ii; i++) {
-        NSMutableDictionary* dic = [NSMutableDictionary dictionaryWithDictionary:a[i]];
-        [dic setObject:@"31" forKey:@"header"];
-        [listController addObject:dic];
-    }
-    _collectView.content = listController.arrangedObjects;
+//    for (NSUInteger i= 0, ii= a.count; i< ii; i++) {
+//        NSMutableDictionary* dic = [NSMutableDictionary dictionaryWithDictionary:a[i]];
+//        [dic setObject:@"31" forKey:@"header"];
+//        [listController addObject:dic];
+//    }
+    [listController addObject:@{@"header" : @"new-header",
+                                @"desc" : @"hello world"}];
+//    _collectView.content = listController.arrangedObjects;
 }
 
 - (IBAction)row2:(id)sender {
@@ -76,7 +78,6 @@
                                     @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
     }
     
-    
     CGFloat width = [[_collectView enclosingScrollView] bounds].size.width;
     CGSize itemSize = NSMakeSize(width, 100);
     [_collectView setMaxItemSize:itemSize];
@@ -88,9 +89,9 @@
     [_collectView setItemPrototype:itemPrototype];
 
     // start KVC
-//    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"self.listController.arrangedObjects" options:NULL];
+    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"self.listController.arrangedObjects" options:NULL];
 
-//    [listController addObserver:_collectView forKeyPath:@"arrangedObjects" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:"1"];
+    [listController addObserver:_collectView forKeyPath:@"arrangedObjects" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:"1"];
     
     // strat collection view
     [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];

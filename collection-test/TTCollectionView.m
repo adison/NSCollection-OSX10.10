@@ -19,7 +19,7 @@
     else {
         NSLog(@"keyPath = %@, change = %@, context = %s", keyPath, change, (char *)context);
     }
-    NSLog(@"relaod");
+    NSLog(@">>>>>>>>>>>>>>>> relaod");
 }
 
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
