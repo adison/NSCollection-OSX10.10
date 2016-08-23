@@ -10,5 +10,6 @@
 
 @interface ViewController : NSViewController <NSCollectionViewDelegate>
 
+@property (nonatomic)     NSArrayController* listController;
 
 @end

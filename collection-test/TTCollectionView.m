@@ -11,6 +11,12 @@
 
 @implementation TTCollectionView
 
+- (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
+//    NSLog(@"keyPath = %@, change = %@, context = %s", keyPath, change, (char *)context);
+    NSLog(@"relaod");
+    [self reloadData];
+}
+
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
     id newItem = [[self itemPrototype] copy];
     [newItem setRepresentedObject:object];
