@@ -23,16 +23,24 @@
 @synthesize listController;
 
 - (IBAction)row1:(id)sender {
-    
-    for (NSInteger i= 0, ii= 30; i< ii; i++) {
-        [listController addObject:@{@"header" : [NSString stringWithFormat:@"%015ld", i],
-                                    @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
+
+    // change content
+    NSArray* a= [listController.arrangedObjects copy];
+
+    for (NSUInteger i= a.count, ii = 0; i > ii; i--) {
+        [listController removeObjectAtArrangedObjectIndex:i-1];
     }
 
-    [_collectView reloadData];
+    for (NSUInteger i= 0, ii= a.count; i< ii; i++) {
+        NSMutableDictionary* dic = [NSMutableDictionary dictionaryWithDictionary:a[i]];
+        [dic setObject:@"31" forKey:@"header"];
+        [listController addObject:dic];
+    }
+    _collectView.content = listController.arrangedObjects;
 }
 
 - (IBAction)row2:(id)sender {
+    // change layout
     snHeight.constant = 200.f;
     
     [_collectView updateConstraints];
@@ -47,18 +55,16 @@
     [_collectView setMaxItemSize:itemSize];
     [_collectView setMinItemSize:itemSize];
 
-    _collectView.content = @[];
     _collectView.content = listController.arrangedObjects;
-    [_collectView reloadData];
 }
 
 
 -(void)viewWillAppear {
     [super viewWillAppear];
+    _collectView.content = listController.arrangedObjects;
 }
 
 - (void)viewDidLoad {
-    
     [super viewDidLoad];
     self.view.wantsLayer = YES;
     
@@ -70,22 +76,25 @@
                                     @"desc" : [NSString stringWithFormat:@"%07ld", i*i]}];
     }
     
-    // strat collection view
-    [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
-    itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
-    itemPrototype.straightStyle = true;
-    
     
     CGFloat width = [[_collectView enclosingScrollView] bounds].size.width;
     CGSize itemSize = NSMakeSize(width, 100);
     [_collectView setMaxItemSize:itemSize];
     [_collectView setMinItemSize:itemSize];
     
+    itemPrototype = [[CollectionItem alloc] initWithNibName:@"CollectionItem" bundle:[NSBundle mainBundle]];
+    itemPrototype.straightStyle = true;
+    
     [_collectView setItemPrototype:itemPrototype];
 
     // start KVC
-    [listController addObserver:_collectView forKeyPath:@"content" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:"1"];
+//    [_collectView bind:NSContentBinding toObject:self withKeyPath:@"self.listController.arrangedObjects" options:NULL];
 
+//    [listController addObserver:_collectView forKeyPath:@"arrangedObjects" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionInitial context:"1"];
+    
+    // strat collection view
+    [_collectView registerClass:[CollectionItem class] forItemWithIdentifier:@"test"];
+    
 }
 
 - (void)setRepresentedObject:(id)representedObject {

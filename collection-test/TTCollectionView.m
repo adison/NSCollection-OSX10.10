@@ -12,14 +12,24 @@
 @implementation TTCollectionView
 
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context {
-//    NSLog(@"keyPath = %@, change = %@, context = %s", keyPath, change, (char *)context);
+ 
+    if ([object isKindOfClass:[NSArrayController class]]) {
+        self.content = [(NSArrayController*)object arrangedObjects];
+    }
+    else {
+        NSLog(@"keyPath = %@, change = %@, context = %s", keyPath, change, (char *)context);
+    }
     NSLog(@"relaod");
-    [self reloadData];
 }
 
 -(NSCollectionViewItem *)newItemForRepresentedObject:(id)object {
-    id newItem = [[self itemPrototype] copy];
-    [newItem setRepresentedObject:object];
+//    id newItem = [[self itemPrototype] copy];
+    id newItem = [super newItemForRepresentedObject:object];
+    
+//    [newItem setRepresentedObject:object];
+
+//    [newItem bind:@"header" toObject:object withKeyPath:@"strHeader" options:nil];
+//    [newItem bind:@"desc" toObject:object withKeyPath:@"strDesc" options:nil];
     
     return newItem;
 }
